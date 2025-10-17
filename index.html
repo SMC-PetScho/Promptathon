@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank Content Marketing Planer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Content Marketing Planer für Banken</h1>
+      <p>
+        Erstelle in wenigen Klicks einen 6-monatigen Social-Media-Plan für Banken.
+        Fülle die Felder aus, klicke auf <strong>Plan erstellen</strong> und markiere anschließend
+        jede Zeile, die du weiter verbessern möchtest.
+      </p>
+    </header>
+
+    <section class="input-panel">
+      <h2>Grundlagen</h2>
+      <form id="plan-form">
+        <label>
+          Zielgruppe
+          <input type="text" name="audience" value="Privatkund:innen und junge Berufseinsteiger:innen" required />
+        </label>
+
+        <label>
+          Markenpositionierung
+          <input type="text" name="positioning" value="Vertrauenswürdige, digitale Bank mit persönlichem Service" required />
+        </label>
+
+        <label>
+          Primäres Ziel
+          <input type="text" name="primaryGoal" value="Steigerung der Markenbekanntheit und Lead-Generierung" required />
+        </label>
+
+        <label>
+          Sekundäres Ziel
+          <input type="text" name="secondaryGoal" value="Förderung von Vertrauen und Kundenbindung" />
+        </label>
+
+        <label>
+          Markenstimme
+          <select name="tone">
+            <option value="vertrauensvoll">Vertrauensvoll</option>
+            <option value="innovativ">Innovativ</option>
+            <option value="beratung">Beratend</option>
+            <option value="locker">Locker</option>
+          </select>
+        </label>
+
+        <button type="submit" class="generate">Plan erstellen</button>
+      </form>
+    </section>
+
+    <section class="output-panel">
+      <h2>Dein 6-Monats-Plan</h2>
+      <p class="hint">
+        Klicke auf eine Zeile, um sie für Feedback zu markieren. Markierte Zeilen kannst du mir nennen,
+        damit wir sie gemeinsam verbessern.
+      </p>
+      <div id="plan"></div>
+    </section>
+  </main>
+
+  <template id="plan-template">
+    <table>
+      <thead>
+        <tr>
+          <th>Monat</th>
+          <th>Fokusthema</th>
+          <th>Content-Ideen</th>
+          <th>Kanäle</th>
+          <th>KPIs</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </template>
+
+  <template id="row-template">
+    <tr>
+      <td class="month"></td>
+      <td class="theme"></td>
+      <td class="ideas"></td>
+      <td class="channels"></td>
+      <td class="kpis"></td>
+    </tr>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
